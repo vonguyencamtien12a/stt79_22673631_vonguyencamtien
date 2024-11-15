@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: gray;
+        }
+        .header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            font-size: 14px;
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 50px;
+        }
+        .menu {
+            display: flex;
+            gap: 15px;
+        }
+        .menu a {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu a:hover {
+            color: #a82929;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .search input {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        .search a {
+            padding: 5px 15px;
+            border: 1px solid #d32f2f;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: white;
+            color: #d32f2f;
+            transition: all 0.3s;
+        }
+        .search a:hover {
+            background-color: #d32f2f;
+            color: white;
+        }
+        .login-container {
+            width: 300px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: #d32f2f;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background: #a82929;
+        }
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .social-login button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .facebook-login {
+            background-color: #3b5998;
+        }
+        .google-login {
+            background-color: #db4437;
+        }
+        .social-login i {
+            margin-right: 10px;
+        }
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <i class="fas fa-phone-alt"></i> 0912 345 678 | <i class="fas fa-envelope"></i> lienhe@carcenter.vn
+    </div>
+
+
+    <div class="nav">
+        <div class="logo"><img src="../IMG/Air Turbo.png" alt="Car Center Logo"></div>
+        <div class="menu">
+            <a href="index.html">TRANG CHỦ</a>
+            <a href="products.html">SẢN PHẨM</a>
+            <a href="news.html">TIN TỨC</a>
+            <a href="contact.html">LIÊN HỆ</a>
+            <a href="cart.html">GIỎ HÀNG</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm...">
+            <a href="#signup">Đăng ký</a>
+            <a href="#login">Đăng nhập</a>
+        </div>
+    </div>
+
+ 
+    <div class="login-container">
+        <h1>ĐĂNG NHẬP</h1>
+        <p>Bạn chưa có tài khoản? <a href="#">Tạo tài khoản</a></p>
+        <input type="text" placeholder="Địa chỉ email hoặc số điện thoại">
+        <input type="password" placeholder="Mật khẩu">
+        <p><a href="#">Quên mật khẩu?</a></p>
+        <div class="terms">
+            <input type="checkbox" id="terms">
+            <label for="terms">Tôi đồng ý Điều kiện - Điều khoản & Chính sách bảo mật của Car Center.</label>
+        </div>
+        <button>ĐĂNG NHẬP</button>
+        <div class="social-login">
+            <button class="facebook-login"><i class="fab fa-facebook-f"></i>ĐĂNG NHẬP BẰNG FACEBOOK</button>
+            <button class="google-login"><i class="fab fa-google"></i>ĐĂNG NHẬP BẰNG GOOGLE</button>
+        </div>
+    </div>
+</body>
+</html>

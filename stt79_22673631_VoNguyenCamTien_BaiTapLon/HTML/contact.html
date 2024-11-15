@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Center</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0909;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            position: relative;
+            color: white; 
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: red;
+            margin: 10px auto 0;
+        }
+        .intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .intro-text {
+            background-color: red;
+            color: white;
+            padding: 20px;
+            width: 50%;
+            text-align: left;
+        }
+        .intro-text h2 {
+            margin: 0 0 10px;
+        }
+        .intro-text p {
+            margin: 0 0 20px;
+        }
+        .intro-text a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .intro-text a:hover {
+            text-decoration: underline;
+        }
+        .intro-image {
+            width: 50%;
+        }
+        .intro-image img {
+            max-width: 100%; 
+            height: auto; 
+            max-height: 300px; 
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .service-item {
+            width: 20%;
+            text-align: center;
+        }
+        .service-item i {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .service-item h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: white; 
+        }
+        .service-item p {
+            font-size: 14px;
+            color: white;
+        }
+        .top-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .top-section div {
+            margin: 0 20px;
+        }
+        .top-section div h3 {
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+        .top-section div p {
+            margin: 5px 0;
+        }
+        .top-section div p i {
+            margin-right: 10px;
+        }
+        .bottom-section {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .bottom-section div {
+            margin: 0 20px;
+        }
+        .bottom-section div h3 {
+            margin-bottom: 10px;
+            color: white; 
+        }
+        .bottom-section div p {
+            margin: 5px 0;
+        }
+        .bottom-section div p i {
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #d32f2f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .scroll-up {
+            position: absolute;
+            right             : 20px;
+            bottom: 10px;
+            background-color: #fff;
+            color: #f0e9e9;
+            border: 1px solid #000;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-title">GIỚI THIỆU</div>
+        <div class="intro">
+            <div class="intro-text">
+                <h2>Car Center</h2>
+                <p>Với 10 năm kinh nghiệm với tất cả các hãng xe hàng đầu thế giới. Chúng tôi – Carcenter tự hào là cơ sở duy nhất đáp ứng mọi nhu cầu của khách hàng.</p>
+                <a href="#">Xem thêm &gt;</a>
+            </div>
+            <div class="intro-image">
+                <img alt="Image of Car Center building with cars parked in front" height="400" src="https://storage.googleapis.com/a1aa/image/CMp8xnTZliZGP14B1OGE1uqsnsmf4qW8uZWoFK8ZseVjJXrTA.jpg" width="600"/>
+            </div>
+        </div>
+        <div class="section-title">DỊCH VỤ CUNG CẤP</div>
+        <div class="services">
+            <div class="service-item">
+                <i class="fas fa-wrench"></i>
+                <h3>Bảo hành</h3>
+                <p>Dịch vụ bảo hành ở tất cả các đại lý trên toàn quốc.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Trả góp</h3>
+                <p>Xử lý trong vòng 24h sau khi tiếp nhận hồ sơ mua xe.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-car"></i>
+                <h3>Lái thử</h3>
+                <p>Carcenter có dịch vụ lái thử xe tại các đại lý trên toàn quốc.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Đổi trả</h3>
+                <p>Hoàn trả trong vòng 10 ngày kể từ ngày nhận xe.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-section">
+        <div>
+            <h3>Showroom</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Tầng 5 - Tòa nhà Ladeco - Trần Bá Giao - Phường 5 - Gò Vấp</p>
+        </div>
+        <div>
+            <h3>Giờ mở cửa</h3>
+            <p><i class="fas fa-clock"></i> Thứ 2 - Thứ 6: 08:00 - 21:00</p>
+            <p><i class="fas fa-clock"></i> Thứ 7 - Chủ Nhật: 08:30 - 22:30</p>
+        </div>
+        <div>
+            <h3>Hỗ trợ & Tư vấn</h3>
+            <p><i class="fas fa-phone"></i> 0927 812 893</p>
+            <p><i class="fas fa-phone"></i> 0913 456 789</p>
+        </div>
+        <div>
+            <h3>Email</h3>
+            <p><i class="fas fa-envelope"></i> lienhe@carcenter.vn</p>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div>
+                     
+                 <h3>VỀ CHÚNG TÔI</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Số 1 - Trần Bá Giao - Gò Vấp</p>
+                <p><i class="fas fa-phone"></i> 0927 812 893</p>
+                <p><i class="fas fa-envelope"></i> lienhe@carcenter.vn</p>
+                <p><i class="fas fa-globe"></i> carcenter.vn</p>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <p>Copyright 2024 © Car Center Demo Template. Thiết kế bởi CamTien</p>
+            <div class="scroll-up"><i class="fas fa-chevron-up"></i></div>
+        </div>
+    </body>
+    </html>

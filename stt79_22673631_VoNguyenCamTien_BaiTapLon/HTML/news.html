@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Center</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: gray;
+        }
+        .header, .nav {
+            padding: 10px 20px;
+            color: white;
+        }
+        .header { 
+            background-color: #d32f2f; 
+            text-align: right; 
+            font-size: 14px; 
+        }
+        .nav { 
+            background-color: black; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            position: relative; 
+        }
+        .logo img { 
+            height: 50px; 
+            margin-right: 20px; 
+        }
+        .menu {
+            display: flex;
+            justify-content: flex-start; 
+            width: 70%;
+        }
+        .menu a { 
+            color: #d32f2f; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin: 0 15px; 
+            display: inline-block; 
+        }
+        .menu a:hover { 
+            color: #a82929; 
+        }
+        .search { 
+            display: flex; 
+            align-items: center; 
+            position: absolute; 
+            right: 20px; 
+        }
+        .search input { 
+            padding: 5px 10px; 
+            border-radius: 20px; 
+            border: 1px solid #ddd; 
+            font-size: 14px; 
+            margin-right: 10px; 
+            outline: none; 
+        }
+        .search a { 
+            padding: 5px 15px; 
+            border: 1px solid #d32f2f; 
+            background-color: white; 
+            color: #d32f2f; font-weight: bold; 
+            border-radius: 20px; 
+            text-decoration: none; 
+            transition: background-color 0.3s, color 0.3s; 
+        }
+        .search a:hover { 
+            background-color: #d32f2f; 
+            color: white; 
+        }
+        .container { 
+            width: 80%; 
+            margin: 20px auto; 
+        }
+        .news-item { 
+            display: flex; 
+            background-color: white; 
+            margin-bottom: 20px; 
+            border-radius: 5px; 
+            overflow: hidden; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        .news-item img { 
+            width: 300px; 
+            height: 200px; 
+            object-fit: cover; }
+        .news-content { 
+            padding: 20px; 
+            flex: 1; 
+        }
+        .news-date { 
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            background-color: #00aaff; 
+            color: white; 
+            padding: 10px; 
+            text-align: center; 
+            font-weight: bold; 
+            border-radius: 5px; }
+        .play-button { 
+            position: absolute; 
+            top: 50%; left: 50%; 
+            transform: translate(-50%, -50%); 
+            font-size: 40px; 
+            color: white; 
+            opacity: 0.8; 
+            cursor: pointer; }
+        .play-button:hover { 
+            opacity: 1; 
+        }
+        .news-title { 
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-bottom: 10px; }
+        .news-description { 
+            color: #666; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <i class="fas fa-phone-alt"></i> 0912 345 678 | <i class="fas fa-envelope"></i> lienhe@carcenter.vn
+    </div>
+    <div class="nav">
+        <div class="logo"><img alt="Car Center Logo" src="../IMG/Air Turbo.png" /></div>
+        <div class="menu">
+            <a href="index.html">TRANG CHỦ</a>
+            <a href="products.html">SẢN PHẨM</a>
+            <a href="news.html">TIN TỨC</a>
+            <a href="contact.html">LIÊN HỆ</a>
+            <a href="cart.html">GIỎ HÀNG</a>
+        </div>
+        <div class="search">
+            <input placeholder="Tìm kiếm..." type="text" />
+            <a href="#signup">Đăng ký</a>
+            <a href="#lognin">Đăng nhập</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="news-item">
+            <div class="news-date"><span>11</span><span>Th5</span></div>
+            <img src="../IMG/car22.jpg" alt="Image of a silver car on a red background"/>
+            <div class="news-content">
+                <div class="news-title">C-Class Mới</div>
+                <div class="news-description">C-Class thế hệ mới để cao sự tiện nghi và thoải mái trong mỗi chuyến [...]</div>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-date"><span>15</span><span>Th11</span></div>
+            <img src="../IMG/car20.jpg" alt="Image of a car's tail light with a play button overlay"/>
+            <div class="play-button"><i class="fas fa-play-circle"></i></div>
+            <div class="news-content">
+                <div class="news-title">The new C-Class Launch Event</div>
+                <div class="news-description">Hãy cùng xem lại những khoảnh khắc đáng nhớ của buổi lễ giới thiệu C-Class [...]</div>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-date"><span>15</span><span>Th11</span></div>
+            <img src="../IMG/car19.jpg" alt="Image of a yellow car with a play button overlay"/>
+            <div class="play-button"><i class="fas fa-play-circle"></i></div>
+            <div class="news-content">
+                <div class="news-title">Mercedes-AMG: Âm thanh của kỷ nguyên điện</div>
+                <div class="news-description">Khi kỷ nguyên điện mở ra, AMG sẽ tiếp tục dẫn đầu cuộc chơi. Cảm [...]</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

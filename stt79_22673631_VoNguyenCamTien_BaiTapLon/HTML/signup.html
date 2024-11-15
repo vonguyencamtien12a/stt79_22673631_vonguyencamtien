@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title>Thông Tin Cá Nhân</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            width: 48%;
+            margin: 1%;
+        }
+        .form-group.full-width {
+            width: 98%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        .checkbox-group label {
+            font-size: 14px;
+        }
+        .checkbox-group a {
+            color: #000;
+            text-decoration: none;
+        }
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+        .btn-submit {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>THÔNG TIN CÁ NHÂN</h1>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="TÔI KHÔNG CÓ ĐỊA CHỈ EMAIL">
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Nhập lại mật khẩu</label>
+                <input type="password" id="confirm-password">
+            </div>
+            <div class="form-group">
+                <label for="first-name">Tên</label>
+                <input type="text" id="first-name">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Họ</label>
+                <input type="text" id="last-name">
+            </div>
+            <div class="form-group">
+                <label for="city">Tỉnh/Thành Phố*</label>
+                <select id="city">
+                    <option>Vui lòng chọn thành phố của bạn</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="district">Quận/Huyện*</label>
+                <select id="district">
+                    <option>Vui lòng quận/huyện của bạn</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ</label>
+                <input type="text" id="address">
+            </div>
+            <div class="form-group">
+                <label for="notes">Ghi chú</label>
+                <input type="text" id="notes">
+            </div>
+            <div class="form-group">
+                <label for="country">Quốc gia</label>
+                <input type="text" id="country" value="Vietnam" readonly>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số Điện Thoại</label>
+                <div style="display: flex;">
+                    <input type="text" id="country-code" value="+84" style="width: 20%;" readonly>
+                    <input type="text" id="phone" placeholder="Example 987 986 689" style="width: 80%;">
+                </div>
+            </div>
+            <div class="form-group full-width checkbox-group">
+                <input type="checkbox" id="newsletter">
+                <label for="newsletter">Nhận tin tức và khuyến mại mới nhất từ Car center qua email</label>
+            </div>
+            <div class="form-group full-width checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">Tôi đồng ý <a href="#">Điều kiện - Điều khoản & Chính sách bảo mật của Car center</a></label>
+            </div>
+            <div class="form-group full-width">
+                <button type="submit" class="btn-submit">ĐĂNG KÝ</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
