@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Báo giá lăn bánh &amp; Lái thử xe</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <style>
@@ -75,9 +78,15 @@
             font-size: 16px;
             text-decoration: none; 
             transition: background-color 0.3s;
+            cursor: pointer;
         }
         .form-container .submit-button:hover {
             background-color: #0088cc;
+        }
+        .success-message {
+            color: green;
+            font-size: 18px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -87,29 +96,54 @@
         <div class="form-container">
             <h2>Báo giá lăn bánh &amp; Lái thử xe</h2>
             <p>Quý khách hàng vui lòng nhập thông tin.<br/>Chọn hình thức thanh toán:</p>
-            <div class="payment-options">
-                <label>
-                    <input checked name="payment" type="radio" value="tragop"/>
-                    Trả góp
-                </label>
-                <label>
-                    <input name="payment" type="radio" value="trathang"/>
-                    Trả thẳng
-                </label>
-            </div>
-            <input placeholder="Họ và tên" type="text"/>
-            <input placeholder="Số điện thoại" type="text"/>
-            <select>
-                <option>- Chọn dòng xe -</option>
-                <option value="Hyundai Accent">Hyundai Accent</option>
-                <option value="Mitsubishi Xpander">Mitsubishi Xpander</option>
-                <option value="Mazda CX-5">Mazda CX-5</option>
-                <option value="Honda City">Honda City</option>
-                <option value="Ford Ranger">Ford Ranger</option>
-            </select>
-            <a href="confirmation.html" class="submit-button">THANH TOÁN</a>
-        </form>
+            <form id="car-form">
+                <div class="payment-options">
+                    <label>
+                        <input checked name="payment" type="radio" value="tragop"/>
+                        Trả góp
+                    </label>
+                    <label>
+                        <input name="payment" type="radio" value="trathang"/>
+                        Trả thẳng
+                    </label>
+                </div>
+                <input id="name" placeholder="Họ và tên" type="text" required/>
+                <input id="phone" placeholder="Số điện thoại" type="text" required/>
+                <select id="car-type" required>
+                    <option value="">- Chọn dòng xe -</option>
+                    <option value="Hyundai Accent">Hyundai Accent</option>
+                    <option value="Mitsubishi Xpander">Mitsubishi Xpander</option>
+                    <option value="Mazda CX-5">Mazda CX-5</option>
+                    <option value="Honda City">Honda City</option>
+                    <option value="Ford Ranger">Ford Ranger</option>
+                </select>
+                <button type="button" class="submit-button" onclick="submitForm()">THANH TOÁN</button>
+                <p id="success-message" class="success-message" style="display: none;">Thanh toán thành công!</p>
+            </form>
+        </div>
     </div>
-</div>
+
+    <script>
+        function submitForm() {
+            // Lấy giá trị từ các trường nhập liệu
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const carType = document.getElementById('car-type').value;
+            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+            // Kiểm tra xem các trường đã được điền đầy đủ chưa
+            if (!name || !phone || !carType) {
+                alert('Vui lòng điền đầy đủ thông tin.');
+                return;
+            }
+
+            // Hiển thị thông báo thành công
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
+
+    
+
+
