@@ -56,21 +56,6 @@
             border-radius: 5px;
             overflow: hidden;
         }
-        .products {
-           display: flex;
-           justify-content: space-between;
-           flex-wrap: wrap;  /* Cho phép các sản phẩm chuyển sang dòng mới khi hết không gian */
-           gap: 20px;        /* Khoảng cách giữa các sản phẩm */
-        }
-        .product {
-           background-color: #fff;
-           width: 23%;         /* Mỗi sản phẩm chiếm 25% chiều rộng */
-           margin-bottom: 20px;
-           box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-           border-radius: 5px;
-           overflow: hidden;
-        }
-
         .product img {
             width: 100%;
             height: auto;
@@ -166,7 +151,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="../HTML/cart.html" class="cart-button" onclick="showCart()">Xem giỏ hàng</a>
+        <a href="javascript:void(0);" class="cart-button" onclick="showCart()">Xem giỏ hàng</a>
         <div class="banner">
             <img alt="Ford Focus" src="../IMG/car17.jpg"/>
             <img alt="Red Swift" src="../IMG/car21.jpg"/>
@@ -181,7 +166,7 @@
                     <div class="product-price">3.875.000.000₫</div>
                     <div class="product-name">Vinfast Sportback 2021</div>
                     <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Vinfast Sportback 2021')">Thêm vào giỏ</button>
+                        <button class="buy-button" onclick="addToCart('Vinfast Sportback 2021', 3875000000)">Thêm vào giỏ</button>
                         <button class="details-button">Chi tiết</button>
                     </div>
                 </div>
@@ -192,93 +177,58 @@
                     <div class="product-price">9.875.000.000₫</div>
                     <div class="product-name">Hyundai Stargazer</div>
                     <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Hyundai Stargazer')">Thêm vào giỏ</button>
+                        <button class="buy-button" onclick="addToCart('Hyundai Stargazer', 9875000000)">Thêm vào giỏ</button>
                         <button class="details-button">Chi tiết</button>
                     </div>
                 </div>
             </div>
-            <div class="product">
-                <img alt="Audi A4 2019" src="../IMG/car12.jpg"/>
-                <div class="product-info">
-                    <div class="product-price">6.885.000.000₫</div>
-                    <div class="product-name">Audi A4 2019</div>
-                    <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Audi A4 2019')">Thêm vào giỏ</button>
-                        <button class="details-button">Chi tiết</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img alt="Volkswagen Polo" src="../IMG/car22.jpg"/>
-                <div class="product-info">
-                    <div class="product-price">2.875.000.000₫</div>
-                    <div class="product-name">Volkswagen Polo</div>
-                    <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Volkswagen Polo')">Thêm vào giỏ</button>
-                        <button class="details-button">Chi tiết</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img alt="Audi A5 2020" src="../IMG/car21.jpg"/>
-                <div class="product-info">
-                    <div class="product-price">3.895.000.000₫</div>
-                    <div class="product-name">Audi A5 2020</div>
-                    <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Audi A5 2020')">Thêm vào giỏ</button>
-                        <button class="details-button">Chi tiết</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img alt="Mercedes A45" src="../IMG/car20.jpg"/>
-                <div class="product-info">
-                    <div class="product-price">6.675.000.000₫</div>
-                    <div class="product-name">Mercedes A45</div>
-                    <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Mercedes A45')">Thêm vào giỏ</button>
-                        <button class="details-button">Chi tiết</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img alt="Mercedes A45 AMG" src="../IMG/car20.jpg"/>
-                <div class="product-info">
-                    <div class="product-price">7.875.000.000₫</div>
-                    <div class="product-name">Mercedes A45 AMG</div>
-                    <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Mercedes A45 AMG')">Thêm vào giỏ</button>
-                        <button class="details-button">Chi tiết</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img alt="Volkswagen Passat" src="../IMG/car20.jpg"/>
-                <div class="product-info">
-                    <div class="product-price">5.975.000.000₫</div>
-                    <div class="product-name">Volkswagen Passat</div>
-                    <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Volkswagen Passat')">Thêm vào giỏ</button>
-                        <button class="details-button">Chi tiết</button>
-                    </div>
-                </div>
-            </div>
-            <div class="product">
-                <img alt="Hyunda I10" src="../IMG/car20.jpg"/>
-                <div class="product-info">
-                    <div class="product-price">6.975.000.000₫</div>
-                    <div class="product-name">Hyundai Grand I10</div>
-                    <div class="product-buttons">
-                        <button class="buy-button" onclick="addToCart('Hyundai Grand I10')">Thêm vào giỏ</button>
-                        <button class="details-button">Chi tiết</button>
-                    </div>
-                </div>
-            </div>
+            <!-- More products go here... -->
+        </div>
+    </div>
+
+    <!-- Cart Popup and Overlay -->
     <div class="cart-overlay" onclick="hideCart()"></div>
     <div class="cart-popup">
         <h3>Giỏ hàng</h3>
         <ul id="cart-items"></ul>
         <button onclick="hideCart()">Đóng</button>
     </div>
+
+    <script>
+        let cart = [];
+
+        // Function to show the cart popup
+        function showCart() {
+            document.querySelector('.cart-overlay').style.display = 'block';
+            document.querySelector('.cart-popup').style.display = 'block';
+            displayCartItems();
+        }
+
+        // Function to hide the cart popup
+        function hideCart() {
+            document.querySelector('.cart-overlay').style.display = 'none';
+            document.querySelector('.cart-popup').style.display = 'none';
+        }
+
+        // Function to add items to the cart
+        function addToCart(name, price) {
+            const item = { name: name, price: price };
+            cart.push(item);
+            alert(`${name} đã được thêm vào giỏ hàng.`);
+        }
+
+        // Function to display items in the cart
+        function displayCartItems() {
+            const cartItemsList = document.getElementById('cart-items');
+            cartItemsList.innerHTML = ''; // Clear existing items
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price.toLocaleString()}₫`;
+                cartItemsList.appendChild(li);
+            });
+        }
+    </script>
 </body>
 </html>
+
+
